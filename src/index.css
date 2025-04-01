@@ -11,31 +11,41 @@ body{
     /* font-family: "Poppins", sans-serif; */
 }
 
+/* Global Container Styles */
 .container {
-    @apply mx-auto w-[1200px] px-4; /* Default padding for mobile */
-}
-
-/* Desktop: */
-@media (min-width: 1024px) {
+    @apply py-20 px-20 max-w-[1200px]; /* Setting Default Container Width And Padding */
+    margin: 0 auto;
+  }
+  
+  /* Responsive Styles For Tablet (Max-Width: 1024px) */
+  @media (max-width: 1024px) {
     .container {
-        @apply px-[80px]; /* 80px padding for desktop */
+      @apply px-10; /* Reducing Padding For Tablets */
     }
-}
-
-/* Tablet: */
-@media (min-width: 768px) and (max-width: 1023px) {
+  }
+  
+  /* Responsive Styles For Mobile (Max-Width: 768px) */
+  @media (max-width: 768px) {
     .container {
-        @apply px-[5vw]; /* Responsive padding ratio for tablet */
+      @apply px-5; /* Further Reducing Padding For Mobile Devices */
     }
-}
-
-/* Mobile: */
-@media (max-width: 767px) {
-    .container {
-        @apply px-[4vw]; /* Responsive padding ratio for mobile */
-    }
-}
-
+  }
+  
+  /* Padding Utility Classes */
+  .padding-y-12 {
+    @apply py-12; /* Applying Vertical Padding Of 12 Units */
+  }
+  
+  .padding-t-0{
+      @apply pt-0;   /*Removing Top Padding */
+  }
+  .padding-b-0{
+      @apply pt-0;   /*Removing Bottom Padding */
+  }
+  
+  .padding-y-0 {
+    @apply py-0; /* Removing Vertical Padding */
+  }
 
   /* index.css */
 .text-stroke {
@@ -45,7 +55,7 @@ body{
 
   /* primary color */
   .primary{
-    color: #5F9EA0;
+    color: #D7F5DC;
   }
 /* 
   .home-four .shane_tm_hero .content .job {
@@ -76,4 +86,23 @@ body{
     background-color: black;
     color: white;
     transform: translateY(-6px);
+}
+
+.btn-secondary{
+  display: inline-block;
+    padding: 12px 48px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: black;
+    text-decoration: none;
+    border: 2px solid black;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+}
+
+.btn-secondary:hover {
+  background-color: transparent;
+  color: black;
+  transform: translateY(-6px);
 }

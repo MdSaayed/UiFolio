@@ -1,25 +1,19 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom"; 
 import Home from "./pages/Home";
+import About from "./pages/About";
 
 
 const router = createBrowserRouter([
 	{ path: "/", element: <Home /> },
-	
-	// { path: "*", element: <NotFound /> },
+	{ path: "about", element: <About /> },
 ]);
 
 
 function App() {
-	// Fix for "global is not defined" issue in Vite
-// if (typeof global === "undefined") {
-//   // @ts-ignore
-//   window.global = window;
-// }
-
 
 	return (
 		<>
-				<RouterProvider router={router} />
+			<RouterProvider router={router} />
 		</>
 	);
 }
